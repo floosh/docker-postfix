@@ -1,7 +1,7 @@
 docker-postfix
 ==============
 
-Forked from ([catatnight/docker-postfix]https://github.com/catatnight/docker-postfix)
+Forked from https://github.com/catatnight/docker-postfix
 
 It's the same idea (TLS + OpenKDIM) but SASL is disabled.
 This postfix instance can be only used from another container with IP like 172.17.x.x (docker defaults)
