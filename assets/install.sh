@@ -34,7 +34,7 @@ postconf -F '*/*/chroot = n'
 ############
 # /etc/postfix/main.cf
 postconf -e smtpd_recipient_restrictions=permit_mynetworks,reject_unauth_destination
-postconf -e mynetworks=172.17.0.0/16
+postconf -e mynetworks=172.0.0.0/8 127.0.0.0/8
 
 ############
 # Enable TLS
