@@ -4,7 +4,7 @@ docker-postfix
 Forked from https://github.com/catatnight/docker-postfix
 
 It's the same idea (TLS + OpenKDIM) but SASL is disabled.
-This postfix instance can be only used from another container with IP like 172.17.x.x (docker defaults)
+This postfix instance can be only used from another container with IP in 172.0.0.0/12 (docker default range) or 127.0.0.0/8 (host)
 
 ## Requirement
 + Docker 1.0
@@ -13,14 +13,14 @@ This postfix instance can be only used from another container with IP like 172.1
 1. Build image
 
 	```bash
-	$ sudo docker pull floosh/postfix
+	$ sudo docker pull floosh/docker-postfix
 	```
 
 ## Usage
 1. Create postfix container
 
 	```bash
-	$ sudo docker run -p 25:25 --name postfix -d floosh/postfix
+	$ sudo docker run -p 25:25 --name postfix -d floosh/docker-postfix
 	```
 	
 2. Enable OpenDKIM: save your domain key ```.private``` in ```/path/to/domainkeys```
