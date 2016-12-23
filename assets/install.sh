@@ -30,11 +30,11 @@ postconf -e myhostname=$maildomain
 postconf -F '*/*/chroot = n'
 
 ############
-# Authorize only requests from docker local network (172.17.0.0/16)
+# Authorize only requests from docker local network (172.16.0.0/12)
 ############
 # /etc/postfix/main.cf
 postconf -e smtpd_recipient_restrictions=permit_mynetworks,reject_unauth_destination
-postconf -e mynetworks=172.0.0.0/8 127.0.0.0/8
+postconf -e mynetworks=172.16.0.0/12 127.0.0.0/8
 
 ############
 # Enable TLS
