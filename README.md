@@ -35,7 +35,7 @@ This postfix instance can be only used from another container with IP in 172.0.0
 	```bash
 	$ sudo docker run -p 587:587 \
 			-v /path/to/certs:/etc/postfix/certs \
-			--name postfix -d floosh/postfix
+			--name postfix -d floosh/docker-postfix
 	```
 
 ## Note
